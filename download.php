@@ -7,8 +7,8 @@ try {
     $db = new PDO("mysql:host=$hostname;dbname=$dbname", $username, $password);
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    $delikanti_name = "Delikanti - FEI STU";
-    $delikanti_url = "https://www.delikanti.sk/prevadzky/1-jedalen-fei-stu/";
+    $delikanti_name = "Delikanti - PriF UK";
+    $delikanti_url = "https://www.delikanti.sk/prevadzky/3-jedalen-prif-uk/";
 
     $eat_name = "Eat & Meet";
     $eat_url = "http://eatandmeet.sk/tyzdenne-menu";
@@ -33,15 +33,15 @@ try {
     $stmt = $db->prepare($sql);
     $success = $stmt->execute(
         array(
+            $freefood_url,
+            $freefood_name,
+            $freefood_text,
             $delikanti_url,
             $delikanti_name,
             $delikanti_text,
             $eat_url,
             $eat_name,
-            $eat_text,
-            $freefood_url,
-            $freefood_name,
-            $freefood_text
+            $eat_text
         )
     );
 

@@ -1,9 +1,9 @@
 <?php
 require_once "./setup/curl_setup.php";
 
-$dom = curlConnect("https://www.delikanti.sk/prevadzky/1-jedalen-fei-stu/");
+$dom = curlConnect("https://www.delikanti.sk/prevadzky/3-jedalen-prif-uk/");
 
-$name_del = "Delikanti - FEI STU";
+$name_del = "Delikanti - PriF UK";
 
 $tables = $dom->getElementsByTagName('table');
 

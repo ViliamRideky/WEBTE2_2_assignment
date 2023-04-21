@@ -1,7 +1,14 @@
 <?php
+
+/*ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);*/
 require_once "./canteens/delikanti.php";
 require_once "./canteens/eat.php";
 require_once "./canteens/freefood.php";
+
+
+
 ?>
 
 <!DOCTYPE html>
